@@ -67,7 +67,13 @@ zuchinis.forEach( zuchini => {
   totalWeight = totalWeight + weight;
 })
 
+// Con Reduce
+const pesotot = zuchinis.reduce((totale, zucchina) => {
+  return totale + zucchina.weight
+}, 0)
+
 console.log(totalWeight);
+console.log(pesotot);
 
 /**************
    SNACK 2 
@@ -85,6 +91,18 @@ zuchinis.forEach( zuchini => {
     longZuchinis.push(zuchini);
   }
 })
+
+// Con Filter
+const zucchineCorte = zuchinis.filter((element) => {
+  return element.length < 15
+})
+
+const zucchineLunghe = zuchinis.filter((element) => {
+  return element.length >= 15
+})
+
+console.log(zucchineCorte);
+console.log(zucchineLunghe);
 
 shortZuchinis.forEach( zuchini => {
   const {weight} = zuchini;
