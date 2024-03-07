@@ -114,16 +114,34 @@ console.log(reverseStr('stefano'));
 const lettersArray = ['a', 'b', 'c'];
 const numbersArray = [1, 2, 3];
 const combinedArray = [];
-let index = 0;
 
-while (index < lettersArray.length - 1) {
-  combineArrays();
+function combineArrays(array1, array2, arrayTot) {
+  for (let index = 0; index < array1.length; index++) {
+    arrayTot.push(array1[index], array2[index]);
+  }
+  return arrayTot  
 }
 
-function combineArrays () {
-  combinedArray.push(lettersArray[index], numbersArray[index]);
-  index++;
-  return combinedArray
+console.log(combineArrays(lettersArray, numbersArray, combinedArray));
+
+/**************
+   SNACK 5
+***************/
+const myArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t"];
+const min = Math.floor(Math.random() * 5);
+const max = Math.floor(Math.random() * (myArray.length - min + 1) + min);
+
+function rangeArray(minimum, maximum, array) {
+  let newArray = [];
+
+  newArray = array.filter((element, index) => {
+    return index >= minimum && index <= maximum
+  })
+
+  return newArray
 }
 
-console.log(combineArrays());
+
+console.log(min);
+console.log(max);
+console.log(rangeArray(min, max, myArray));
