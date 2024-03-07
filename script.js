@@ -111,3 +111,19 @@ console.log(reverseStr('stefano'));
 /**************
    SNACK 4
 ***************/
+const lettersArray = ['a', 'b', 'c'];
+const numbersArray = [1, 2, 3];
+const combinedArray = [];
+let index = 0;
+
+while (index < lettersArray.length - 1) {
+  combineArrays();
+}
+
+function combineArrays () {
+  combinedArray.push(lettersArray[index], numbersArray[index]);
+  index++;
+  return combinedArray
+}
+
+console.log(combineArrays());
