@@ -98,3 +98,16 @@ longZuchinis.forEach( zuchini => {
 
 console.log(totWeightShort);
 console.log(totWeightLong);
+
+/**************
+   SNACK 3
+***************/
+function reverseStr(str) {
+  return str.split('').reverse().join('')
+}
+
+console.log(reverseStr('stefano'));
+
+/**************
+   SNACK 4
+***************/
